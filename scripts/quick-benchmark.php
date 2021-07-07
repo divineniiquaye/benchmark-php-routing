@@ -18,6 +18,7 @@ final class QuickBenchmark
         'raw' => [
             // uncached, router instance is created in each iteration from scratch.
             'symfony' => Symfony\Symfony::class,
+            'flight-routing' => Flight\FlightRouting::class,
             'hack-routing' => HackRouting\HackRouting::class,
             'fast-route(mark)' => FastRoute\FastRouteMarkBased::class,
         ],
@@ -25,6 +26,7 @@ final class QuickBenchmark
         'cached' => [
             // router instance is created in each iteration using cache.
             'symfony:cached(file)' => Symfony\SymfonyCached::class,
+            'flight-routing:cached(file)' => Flight\FlightRoutingCached::class,
             'hack-routing:cached(file)' => HackRouting\HackRoutingFilesCached::class,
             'hack-routing:cached(apcu)' => HackRouting\HackRoutingApcuCached::class,
             'fast-route(mark):cached(file)' => FastRoute\FastRouteMarkBasedFilesCached::class,
@@ -34,6 +36,7 @@ final class QuickBenchmark
         'instance' => [
             // router instance is only created once in the constructor, and kept in the memory.
             'symfony:instance' => Symfony\SymfonyInstance::class,
+            'flight-routing:instance' => Flight\FlightRoutingInstance::class,
             'hack-routing:instance' => HackRouting\HackRoutingInstance::class,
             'fast-route(mark):instance' => FastRoute\FastRouteMarkBasedInstance::class,
         ]

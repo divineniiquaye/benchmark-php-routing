@@ -6,6 +6,7 @@ $txt = __DIR__ . '/../routes/bitbucket-routes.txt';
 $symfony_routes = __DIR__ . '/../routes/symfony-routes.php';
 $fastroute_routes = __DIR__ . '/../routes/fastroute-routes.php';
 $hack_routes = __DIR__ . '/../routes/hack-routes.php';
+$flight_routes = __DIR__ . '/../routes/flight-routing-routes.php';
 $result_routes = __DIR__ . '/../routes/result-routes.php';
 
 $vars = ['john', 'paul', 'george', 'ringo'];
@@ -29,6 +30,8 @@ while ($r = fgets($fp)) {
 
     // $routes->addRoute('GET', '/addon', ['_route' => 'addon']);
     $hack[] = "\$routes->addRoute('GET', '{$r}', ['_route' => '{$name}']);";
+
+    $flight[] = "\$routes->addRoute('{$r}', ['GET'])->default('_route', '{$name}');";
 
     $m = $r;
     $result = "['_route' => '{$name}'";
@@ -56,6 +59,9 @@ fclose($fp);
 
 file_put_contents($symfony_routes, "<?php \n\n\$routes = new Symfony\Component\Routing\RouteCollection(); \n\n" . implode("\n", $symfony) . "\n\nreturn \$routes;");
 printf("%s done.\n", basename($symfony_routes));
+
+file_put_contents($flight_routes, "<?php \n\n\$routes = new Flight\Routing\RouteCollection(); \n\n" . implode("\n", $flight) . "\n\nreturn new Flight\Routing\RouteMatcher(\$routes);");
+printf("%s done.\n", basename($flight_routes));
 
 file_put_contents($fastroute_routes, "<?php\n\n" . implode("\n", $fast));
 

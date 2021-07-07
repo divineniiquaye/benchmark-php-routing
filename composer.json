@@ -13,7 +13,9 @@
     "symfony/routing": "^5.3",
     "nikic/fast-route": "dev-master",
     "azjezz/hack-routing": "dev-main",
-    "symfony/config": "^5.3"
+    "divineniiquaye/flight-routing": "dev-performance",
+    "symfony/config": "^5.3",
+    "nyholm/psr7": "^1.4"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.6.0"
