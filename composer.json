@@ -10,8 +10,8 @@
     "php": "^8.0",
     "ext-apcu": "*",
     "phpbench/phpbench": "^1.0",
-    "symfony/routing": "^4.4",
-    "nikic/fast-route": "dev-introduce-cache-drivers@dev",
+    "symfony/routing": "^5.3",
+    "nikic/fast-route": "dev-master",
     "azjezz/hack-routing": "dev-main",
     "symfony/config": "^5.3"
   },
