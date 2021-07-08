@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02d4126856b7be14ffbdc107db6b38c8",
+    "content-hash": "ed0954090859629a1ffff53f2f0210b3",
     "packages": [
         {
             "name": "azjezz/hack-routing",
