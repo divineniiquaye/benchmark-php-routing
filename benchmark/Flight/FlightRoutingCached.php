@@ -10,11 +10,11 @@ use PhpBench\Attributes as Bench;
 #[Bench\Groups(['flight-routing', 'cached'])]
 final class FlightRoutingCached extends Benchmark
 {
-    public function runRouting(string $route): array
+    public function runRouting(string $route, string $method = 'GET'): array
     {
         $router = $this->loadedRoutes();
 
-        return $router->match('GET', new Uri($route))->get('defaults');
+        return $router->match($method, new Uri($route))->get('defaults');
     }
 
     public function loadedRoutes(): Router

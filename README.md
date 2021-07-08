@@ -5,11 +5,12 @@ Take a real world routing scenario in the form of [Bitbucket API](https://develo
 You can read more about this here: http://kaloyan.info/writing/2021/05/31/benchmark-php-routing.html
 
 # Packages
-Here are the packages that are benchmakred:
+Here are the packages that are benchmarked:
 
 * Symfony Routing [symfony/routing](https://github.com/symfony/routing)
 * Fast Route [nikic/FastRoute](https://github.com/nikic/FastRoute)
 * Hack Routing [azjezz/hack-routing](https://github.com/azjezz/hack-routing)
+* Flight Routing [divineniiquaye/flight-routing](https://github.com/divineniiquaye/flight-routing)
 
 So far these are the most popular ones: **Symfony Routing** component is used not only by
 them but by **Laravel** as well, and **FastRoute** is used by other popular solutions such
