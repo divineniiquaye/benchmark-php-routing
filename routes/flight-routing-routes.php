@@ -185,4 +185,4 @@ $routes->addRoute('/workspaces/{workspace}/projects', ['GET'])->default('_route'
 $routes->addRoute('/workspaces/{workspace}/projects/{project_key}', ['GET'])->default('_route', 'workspaces_workspace_projects_project_key');
 $routes->addRoute('/workspaces/{workspace}/search/code', ['GET'])->default('_route', 'workspaces_workspace_search_code');
 
-return new Flight\Routing\RouteMatcher($routes);
+return new Flight\Routing\RouteMatcher($routes->getData());
