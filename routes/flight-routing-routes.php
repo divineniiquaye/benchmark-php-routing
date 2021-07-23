@@ -1,6 +1,4 @@
-<?php 
-
-$routes = new Flight\Routing\RouteCollection(); 
+<?php
 
 $routes->addRoute('/addon', ['GET'])->default('_route', 'addon');
 $routes->addRoute('/addon/linkers', ['GET'])->default('_route', 'addon_linkers');
@@ -184,5 +182,3 @@ $routes->addRoute('/workspaces/{workspace}/pipelines-config/variables/{variable_
 $routes->addRoute('/workspaces/{workspace}/projects', ['GET'])->default('_route', 'workspaces_workspace_projects');
 $routes->addRoute('/workspaces/{workspace}/projects/{project_key}', ['GET'])->default('_route', 'workspaces_workspace_projects_project_key');
 $routes->addRoute('/workspaces/{workspace}/search/code', ['GET'])->default('_route', 'workspaces_workspace_search_code');
-
-return new Flight\Routing\RouteMatcher($routes->getData());

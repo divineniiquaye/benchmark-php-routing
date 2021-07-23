@@ -60,11 +60,10 @@ fclose($fp);
 file_put_contents($symfony_routes, "<?php \n\n\$routes = new Symfony\Component\Routing\RouteCollection(); \n\n" . implode("\n", $symfony) . "\n\nreturn \$routes;");
 printf("%s done.\n", basename($symfony_routes));
 
-file_put_contents($flight_routes, "<?php \n\n\$routes = new Flight\Routing\RouteCollection(); \n\n" . implode("\n", $flight) . "\n\nreturn new Flight\Routing\RouteMatcher(\$routes);");
+file_put_contents($flight_routes, "<?php\n\n" . implode("\n", $flight));
 printf("%s done.\n", basename($flight_routes));
 
 file_put_contents($fastroute_routes, "<?php\n\n" . implode("\n", $fast));
-
 printf("%s done.\n", basename($fastroute_routes));
 
 $hack = implode("\n", $hack);
@@ -82,9 +81,7 @@ $hack
 return \$routes;
 PHP
 );
-
 printf("%s done.\n", basename($hack_routes));
 
 file_put_contents($result_routes, '<?php return array(' . implode(",\n\t", $routes) . ');');
-
 printf("%s done.\n", basename($result_routes));

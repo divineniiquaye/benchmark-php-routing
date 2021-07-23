@@ -3,18 +3,20 @@
 namespace BenchmarkRouting\Flight;
 
 use BenchmarkRouting\Benchmark;
-use Flight\Routing\Interfaces\RouteMatcherInterface;
+use Flight\Routing\RouteCollection;
+use Flight\Routing\Router;
 use Nyholm\Psr7\Uri;
 use PhpBench\Attributes as Bench;
 
 #[Bench\Groups(['flight-routing', 'instance'])]
 final class FlightRoutingInstance extends Benchmark
 {
-    protected RouteMatcherInterface $router;
+    protected Router $router;
 
     public function __construct()
     {
-        $this->router = include __DIR__ . '/../../routes/flight-routing-routes.php';
+        $this->router = new Router();
+        $this->router->setCollection([$this, 'loadRoutes']);
         
         // warmup.
         $this->benchAll();
@@ -23,5 +25,10 @@ final class FlightRoutingInstance extends Benchmark
     public function runRouting(string $route, string $method = 'GET'): array
     {
         return $this->router->match($method, new Uri($route))->get('defaults');
+    }
+
+    public function loadedRoutes(RouteCollection $routes): void
+    {
+        include __DIR__ . '/../../routes/flight-routing-routes.php';
     }
 }
