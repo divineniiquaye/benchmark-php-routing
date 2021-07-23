@@ -25,6 +25,6 @@ final class SymfonyInstance extends Benchmark
     {
         $this->router->getContext()->setMethod($method);
 
-       return $this->router->match($route);
+        return $this->router->match($route);
     }
 }

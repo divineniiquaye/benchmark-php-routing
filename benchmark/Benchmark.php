@@ -3,8 +3,8 @@
 namespace BenchmarkRouting;
 
 use PhpBench\Attributes as Bench;
-
 use Throwable;
+
 use function assert;
 
 /**

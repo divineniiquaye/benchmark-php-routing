@@ -142,7 +142,6 @@ final class QuickBenchmark
                     for ($i = 0; $i < $repeats; $i++) {
                         $routers[] = fn() => $this->$scenario_name($bench);
                     }
-
                 }
             }
         }
