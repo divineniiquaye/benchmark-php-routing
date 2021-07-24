@@ -14,7 +14,7 @@ final class FlightRoutingCached extends Benchmark
     public function runRouting(string $route, string $method = 'GET'): array
     {
         $router = new Router();
-        $router->setCollection([$this, 'loadRoutes']);
+        $router->setCollection([$this, 'loadedRoutes']);
 
         return $router->match($method, new Uri($route))->get('defaults');
     }

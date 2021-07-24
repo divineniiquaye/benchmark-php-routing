@@ -16,7 +16,7 @@ final class FlightRoutingInstance extends Benchmark
     public function __construct()
     {
         $this->router = new Router();
-        $this->router->setCollection([$this, 'loadRoutes']);
+        $this->router->setCollection([$this, 'loadedRoutes']);
 
         // warmup.
         $this->benchAll();
