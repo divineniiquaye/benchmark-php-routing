@@ -133,12 +133,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/divineniiquaye/flight-routing.git",
-                "reference": "b247c1020cefe0e8698d4b50d17e90c949273ae0"
+                "reference": "23ea848f14385c961d71e4c2375ecb0a316b1c70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/divineniiquaye/flight-routing/zipball/b247c1020cefe0e8698d4b50d17e90c949273ae0",
-                "reference": "b247c1020cefe0e8698d4b50d17e90c949273ae0",
+                "url": "https://api.github.com/repos/divineniiquaye/flight-routing/zipball/23ea848f14385c961d71e4c2375ecb0a316b1c70",
+                "reference": "23ea848f14385c961d71e4c2375ecb0a316b1c70",
                 "shasum": ""
             },
             "require": {
@@ -217,7 +217,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-07-21T23:46:52+00:00"
+            "time": "2021-07-23T15:37:55+00:00"
         },
         {
             "name": "doctrine/annotations",
