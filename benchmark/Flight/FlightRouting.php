@@ -3,7 +3,6 @@
 namespace BenchmarkRouting\Flight;
 
 use BenchmarkRouting\Benchmark;
-use Flight\Routing\Interfaces\RouteMatcherInterface;
 use Flight\Routing\RouteCollection;
 use Flight\Routing\Router;
 use Nyholm\Psr7\Uri;
@@ -20,8 +19,8 @@ final class FlightRouting extends Benchmark
         return $router->match($method, new Uri($route))->get('defaults');
     }
 
-    public function loadedRoutes(RouteCollection $routes): RouteMatcherInterface
+    public function loadedRoutes(RouteCollection $routes): void
     {
-        return include __DIR__ . '/../../routes/flight-routing-routes.php';
+        include __DIR__ . '/../../routes/flight-routing-routes.php';
     }
 }
