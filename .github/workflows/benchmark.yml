@@ -31,7 +31,7 @@ jobs:
           coverage: none
 
       - name: "installing dependencies"
-        run: "composer install --no-interaction --no-progress"
+        run: "composer update --no-interaction --no-progress"
 
       - name: "running quick benchmarks"
         run: php scripts/quick-benchmark.php &> /dev/null && php scripts/quick-benchmark.php
