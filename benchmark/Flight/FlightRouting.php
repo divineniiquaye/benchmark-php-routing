@@ -16,7 +16,7 @@ final class FlightRouting extends Benchmark
         $router = new Router();
         $router->setCollection([$this, 'loadedRoutes']);
 
-        return $router->match($method, new Uri($route))->get('defaults');
+        return $router->match($method, new Uri($route))->getDefaults();
     }
 
     public function loadedRoutes(RouteCollection $routes): void

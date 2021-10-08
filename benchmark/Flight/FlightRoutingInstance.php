@@ -24,7 +24,7 @@ final class FlightRoutingInstance extends Benchmark
 
     public function runRouting(string $route, string $method = 'GET'): array
     {
-        return $this->router->match($method, new Uri($route))->get('defaults');
+        return $this->router->match($method, new Uri($route))->getDefaults();
     }
 
     public function loadedRoutes(RouteCollection $routes): void

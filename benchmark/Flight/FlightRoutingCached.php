@@ -13,10 +13,10 @@ final class FlightRoutingCached extends Benchmark
 {
     public function runRouting(string $route, string $method = 'GET'): array
     {
-        $router = new Router();
+        $router = new Router(null, __DIR__ . '/../../cache/flight-routing-cached-routes.php');
         $router->setCollection([$this, 'loadedRoutes']);
 
-        return $router->match($method, new Uri($route))->get('defaults');
+        return $router->match($method, new Uri($route))->getDefaults();
     }
 
     public function loadedRoutes(RouteCollection $routes): void
