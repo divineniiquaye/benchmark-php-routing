@@ -2,7 +2,9 @@
   "runner.path": "benchmark",
   "runner.bootstrap": "vendor/autoload.php",
   "runner.output_mode": "time",
-  "runner.time_unit": "milliseconds",
+  "runner.iterations": 5,
+  "runner.revs": 100,
+  "runner.retry_threshold": 5,
   "runner.file_pattern": "*.php",
   "runner.php_config": {
     "opcache.enable": true,
