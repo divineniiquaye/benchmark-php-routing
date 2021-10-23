@@ -142,12 +142,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/divineniiquaye/flight-routing.git",
-                "reference": "fd3819231548bff407f0a533fed414231558bf7c"
+                "reference": "f046a9e6dbacb9873a9ac17d9e7e36022c9a4440"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/divineniiquaye/flight-routing/zipball/fd3819231548bff407f0a533fed414231558bf7c",
-                "reference": "fd3819231548bff407f0a533fed414231558bf7c",
+                "url": "https://api.github.com/repos/divineniiquaye/flight-routing/zipball/f046a9e6dbacb9873a9ac17d9e7e36022c9a4440",
+                "reference": "f046a9e6dbacb9873a9ac17d9e7e36022c9a4440",
                 "shasum": ""
             },
             "require": {
@@ -227,7 +227,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-10-09T08:52:33+00:00"
+            "time": "2021-10-22T19:54:18+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1406,12 +1406,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "a58210ca492c70bbc53d87f9394132d3c37cc619"
+                "reference": "cc731091d9942da9202603a8d96f3c7b77874521"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/a58210ca492c70bbc53d87f9394132d3c37cc619",
-                "reference": "a58210ca492c70bbc53d87f9394132d3c37cc619",
+                "url": "https://api.github.com/repos/symfony/config/zipball/cc731091d9942da9202603a8d96f3c7b77874521",
+                "reference": "cc731091d9942da9202603a8d96f3c7b77874521",
                 "shasum": ""
             },
             "require": {
@@ -1477,7 +1477,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-06T07:48:14+00:00"
+            "time": "2021-10-22T09:30:22+00:00"
         },
         {
             "name": "symfony/console",
@@ -2830,16 +2830,16 @@
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.6.0",
+            "version": "3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625"
+                "reference": "f268ca40d54617c6e06757f83f699775c9b3ff2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
-                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/f268ca40d54617c6e06757f83f699775c9b3ff2e",
+                "reference": "f268ca40d54617c6e06757f83f699775c9b3ff2e",
                 "shasum": ""
             },
             "require": {
@@ -2882,7 +2882,7 @@
                 "source": "https://github.com/squizlabs/PHP_CodeSniffer",
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
-            "time": "2021-04-09T00:54:41+00:00"
+            "time": "2021-10-11T04:00:11+00:00"
         }
     ],
     "aliases": [],
