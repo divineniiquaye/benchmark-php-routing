@@ -31,8 +31,7 @@ while ($r = fgets($fp)) {
     // $routes->addRoute('GET', '/addon', ['_route' => 'addon']);
     $hack[] = "\$routes->addRoute('GET', '{$r}', ['_route' => '{$name}']);";
 
-    // $routes->fastRoute('/addon', ['GET'])->default('_route', 'addon');
-    $flight[] = "\$routes->fastRoute('{$r}', ['GET'])->default('_route', '{$name}');";
+    $flight[] = "\$routes->addRoute('{$r}', ['GET'])->default('_route', '{$name}');";
 
     $m = $r;
     $result = "['_route' => '{$name}'";
