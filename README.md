@@ -19,7 +19,7 @@ as the [Slim](https://github.com/slimphp/Slim) framework and [League\Route](http
 **Hack Routing** is a PHP rewrite of [hhvm/hack-router](https://github.com/hhvm/hack-router) by Facebook, Inc.
 It implements the same algorithm used to route HTTP requests throughout facebook.com.
 
-**Flight Routing** is an easy to use fast PHP router not faster than **FastRoute**, but better than it in terms of the functionalities it offers. Taking the extra features away will make **Flight Routing** the fastest PHP router.
+**Flight Routing** is an easy to use fast PHP router which competes with **FastRoute** and **Symfony**, offering some functionalities such as PSR-7, PSR-15 and PSR-17. Taking the extra features away will make **Flight Routing** the fastest PHP router.
 
 # Benchmarks
 
