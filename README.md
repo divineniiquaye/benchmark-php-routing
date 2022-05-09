@@ -19,7 +19,7 @@ as the [Slim](https://github.com/slimphp/Slim) framework and [League\Route](http
 **Hack Routing** is a PHP rewrite of [hhvm/hack-router](https://github.com/hhvm/hack-router) by Facebook, Inc.
 It implements the same algorithm used to route HTTP requests throughout facebook.com.
 
-**Flight Routing** is an easy to use fast PHP router which competes with **FastRoute** and **Symfony**, offering some functionalities such as PSR-7, PSR-15 and PSR-17. Taking the extra features away will make **Flight Routing** the fastest PHP router.
+**Flight Routing** is an easy to use fast PHP router which competes with **FastRoute** and **Symfony**, offering some functionalities such as PSR-7, PSR-15 and PSR-17. Flight is faster than both **FastRoute** and **Symfony** when not compiled and even still fast enough when compiled.
 
 # Benchmarks
 
@@ -127,36 +127,36 @@ https://github.com/divineniiquaye/benchmark-php-routing/actions
 +------------------------------ Benchmark results for group cached. -------------+-----------------+
 | Case                          | Scenario           | Routes | Time             | Per Second      |
 +-------------------------------+--------------------+--------+------------------+-----------------+
-| fast-route(mark):cached(file) | benchAll           | 364    | 0.004701 seconds | 77428.068566792 |
-| fast-route(mark):cached(file) | benchInvalidRoute  | 300    | 0.004647 seconds | 64557.549638294 |
-| symfony:cached(file)          | benchAll           | 364    | 0.005863 seconds | 62082.24853611  |
-| fast-route(mark):cached(file) | benchInvalidMethod | 300    | 0.005252 seconds | 57122.35336844  |
-| symfony:cached(file)          | benchInvalidRoute  | 300    | 0.005503 seconds | 54513.958929035 |
-| symfony:cached(file)          | benchLast          | 300    | 0.006210 seconds | 48308.488501555 |
-| fast-route(mark):cached(file) | benchLast          | 300    | 0.006491 seconds | 46218.225895317 |
-| symfony:cached(file)          | benchInvalidMethod | 300    | 0.008187 seconds | 36643.210343924 |
-| fast-route(mark):cached(apcu) | benchAll           | 364    | 0.033939 seconds | 10725.160913242 |
-| fast-route(mark):cached(apcu) | benchInvalidMethod | 300    | 0.030251 seconds | 9917.0189625007 |
-| fast-route(mark):cached(apcu) | benchLast          | 300    | 0.031376 seconds | 9561.4832826747 |
-| fast-route(mark):cached(apcu) | benchInvalidRoute  | 300    | 0.033162 seconds | 9046.5321264497 |
-| fast-route(mark):cached(file) | benchLongest       | 300    | 0.044005 seconds | 6817.3830124993 |
-| symfony:cached(file)          | benchLongest       | 300    | 0.052136 seconds | 5754.1875120042 |
-| hack-routing:cached(apcu)     | benchInvalidRoute  | 300    | 0.062724 seconds | 4782.8677641657 |
-| hack-routing:cached(apcu)     | benchLast          | 300    | 0.066609 seconds | 4503.8861188565 |
-| flight-routing:cached(file)   | benchInvalidMethod | 300    | 0.067035 seconds | 4475.2767947646 |
-| hack-routing:cached(file)     | benchInvalidRoute  | 300    | 0.067312 seconds | 4456.8574737804 |
-| hack-routing:cached(file)     | benchAll           | 364    | 0.083356 seconds | 4366.8172758996 |
-| flight-routing:cached(file)   | benchInvalidRoute  | 300    | 0.069311 seconds | 4328.3084289606 |
-| hack-routing:cached(apcu)     | benchInvalidMethod | 300    | 0.069377 seconds | 4324.20305992   |
-| flight-routing:cached(file)   | benchLast          | 300    | 0.069882 seconds | 4292.9561319113 |
-| flight-routing:cached(file)   | benchAll           | 364    | 0.085486 seconds | 4258.0103861622 |
-| fast-route(mark):cached(apcu) | benchLongest       | 300    | 0.072339 seconds | 4147.1372259502 |
-| hack-routing:cached(file)     | benchInvalidMethod | 300    | 0.072566 seconds | 4134.165670053  |
-| hack-routing:cached(file)     | benchLast          | 300    | 0.073041 seconds | 4107.2843358707 |
-| hack-routing:cached(apcu)     | benchAll           | 364    | 0.089345 seconds | 4074.0957890804 |
-| hack-routing:cached(file)     | benchLongest       | 300    | 0.110309 seconds | 2719.6358519806 |
-| flight-routing:cached(file)   | benchLongest       | 300    | 0.112439 seconds | 2668.1096852445 |
-| hack-routing:cached(apcu)     | benchLongest       | 300    | 0.119578 seconds | 2508.8251127514 |
+| fast-route(mark):cached(file) | benchAll           | 364    | 0.004945 seconds | 73609.115086062 |
+| fast-route(mark):cached(file) | benchInvalidRoute  | 300    | 0.004779 seconds | 62773.320029933 |
+| fast-route(mark):cached(file) | benchLast          | 300    | 0.004854 seconds | 61805.157424235 |
+| fast-route(mark):cached(file) | benchInvalidMethod | 300    | 0.004858 seconds | 61756.623312884 |
+| symfony:cached(file)          | benchAll           | 364    | 0.006521 seconds | 55819.774633469 |
+| symfony:cached(file)          | benchInvalidRoute  | 300    | 0.005840 seconds | 51371.4052421   |
+| symfony:cached(file)          | benchLast          | 300    | 0.006496 seconds | 46182.602950892 |
+| symfony:cached(file)          | benchInvalidMethod | 300    | 0.007457 seconds | 40230.559196854 |
+| flight-routing:cached(file)   | benchAll           | 364    | 0.026960 seconds | 13501.535718708 |
+| flight-routing:cached(file)   | benchInvalidRoute  | 300    | 0.023078 seconds | 12999.413198892 |
+| flight-routing:cached(file)   | benchLast          | 300    | 0.024354 seconds | 12318.314602342 |
+| flight-routing:cached(file)   | benchInvalidMethod | 300    | 0.025549 seconds | 11742.062877353 |
+| fast-route(mark):cached(apcu) | benchInvalidRoute  | 300    | 0.026067 seconds | 11508.796063403 |
+| fast-route(mark):cached(apcu) | benchAll           | 364    | 0.032235 seconds | 11292.106358587 |
+| fast-route(mark):cached(apcu) | benchInvalidMethod | 300    | 0.028487 seconds | 10531.13162542  |
+| fast-route(mark):cached(apcu) | benchLast          | 300    | 0.028559 seconds | 10504.5807071   |
+| fast-route(mark):cached(file) | benchLongest       | 300    | 0.046382 seconds | 6468.0333093451 |
+| symfony:cached(file)          | benchLongest       | 300    | 0.049337 seconds | 6080.640204123  |
+| hack-routing:cached(apcu)     | benchInvalidRoute  | 300    | 0.058426 seconds | 5134.7088012536 |
+| hack-routing:cached(apcu)     | benchLast          | 300    | 0.058867 seconds | 5096.2358144395 |
+| hack-routing:cached(apcu)     | benchAll           | 364    | 0.072337 seconds | 5032.0090968119 |
+| hack-routing:cached(file)     | benchInvalidRoute  | 300    | 0.060012 seconds | 4998.9916927881 |
+| hack-routing:cached(file)     | benchLast          | 300    | 0.060620 seconds | 4948.8755516051 |
+| hack-routing:cached(apcu)     | benchInvalidMethod | 300    | 0.060987 seconds | 4919.0814627167 |
+| hack-routing:cached(file)     | benchAll           | 364    | 0.074916 seconds | 4858.7670970432 |
+| hack-routing:cached(file)     | benchInvalidMethod | 300    | 0.062843 seconds | 4773.8130828357 |
+| flight-routing:cached(file)   | benchLongest       | 300    | 0.069627 seconds | 4308.6704766862 |
+| fast-route(mark):cached(apcu) | benchLongest       | 300    | 0.070245 seconds | 4270.764928096  |
+| hack-routing:cached(apcu)     | benchLongest       | 300    | 0.104296 seconds | 2876.4294809223 |
+| hack-routing:cached(file)     | benchLongest       | 300    | 0.106674 seconds | 2812.3078160935 |
 +-------------------------------+--------------------+--------+------------------+-----------------+
 ```
 
@@ -168,26 +168,26 @@ https://github.com/divineniiquaye/benchmark-php-routing/actions
 +--------------------------- Benchmark results for group instance. ----------+-----------------+
 | Case                      | Scenario           | Routes | Time             | Per Second      |
 +---------------------------+--------------------+--------+------------------+-----------------+
-| flight-routing:instance   | benchAll           | 364    | 0.000575 seconds | 633233.78515139 |
-| fast-route(mark):instance | benchAll           | 364    | 0.000680 seconds | 535317.90182328 |
-| fast-route(mark):instance | benchLast          | 300    | 0.000860 seconds | 348847.01968395 |
-| hack-routing:instance     | benchLast          | 300    | 0.000936 seconds | 320502.08863984 |
-| flight-routing:instance   | benchLast          | 300    | 0.000992 seconds | 302401.15356885 |
-| hack-routing:instance     | benchInvalidRoute  | 300    | 0.000997 seconds | 300954.60416168 |
-| fast-route(mark):instance | benchInvalidMethod | 300    | 0.001035 seconds | 289862.05943331 |
-| fast-route(mark):instance | benchInvalidRoute  | 300    | 0.001238 seconds | 242351.92604006 |
-| hack-routing:instance     | benchAll           | 364    | 0.001588 seconds | 229203.8216484  |
-| hack-routing:instance     | benchInvalidMethod | 300    | 0.002304 seconds | 130217.44799752 |
-| flight-routing:instance   | benchInvalidRoute  | 300    | 0.005013 seconds | 59844.535337201 |
-| symfony:instance          | benchInvalidRoute  | 300    | 0.009220 seconds | 32537.525858502 |
-| symfony:instance          | benchAll           | 364    | 0.013011 seconds | 27976.373524886 |
-| symfony:instance          | benchLast          | 300    | 0.012110 seconds | 24772.925403106 |
-| symfony:instance          | benchInvalidMethod | 300    | 0.013257 seconds | 22629.508668442 |
-| flight-routing:instance   | benchInvalidMethod | 300    | 0.022599 seconds | 13274.934326437 |
-| flight-routing:instance   | benchLongest       | 300    | 0.039608 seconds | 7574.2271019937 |
-| fast-route(mark):instance | benchLongest       | 300    | 0.041581 seconds | 7214.848368434  |
-| hack-routing:instance     | benchLongest       | 300    | 0.045894 seconds | 6536.8153647146 |
-| symfony:instance          | benchLongest       | 300    | 0.059929 seconds | 5005.9325270528 |
+| flight-routing:instance   | benchAll           | 364    | 0.000413 seconds | 881481.9030023  |
+| fast-route(mark):instance | benchAll           | 364    | 0.000729 seconds | 499256.5912361  |
+| flight-routing:instance   | benchLast          | 300    | 0.000858 seconds | 349622.45068075 |
+| hack-routing:instance     | benchInvalidRoute  | 300    | 0.000895 seconds | 335186.78742674 |
+| fast-route(mark):instance | benchInvalidMethod | 300    | 0.000904 seconds | 331915.37852809 |
+| hack-routing:instance     | benchLast          | 300    | 0.000942 seconds | 318474.10782081 |
+| hack-routing:instance     | benchAll           | 364    | 0.001148 seconds | 317077.18712358 |
+| fast-route(mark):instance | benchLast          | 300    | 0.000984 seconds | 304892.46425975 |
+| fast-route(mark):instance | benchInvalidRoute  | 300    | 0.001409 seconds | 212908.83248731 |
+| hack-routing:instance     | benchInvalidMethod | 300    | 0.002127 seconds | 141032.4142569  |
+| flight-routing:instance   | benchInvalidRoute  | 300    | 0.004623 seconds | 64893.821557504 |
+| flight-routing:instance   | benchInvalidMethod | 300    | 0.006120 seconds | 49017.966497857 |
+| symfony:instance          | benchInvalidRoute  | 300    | 0.008648 seconds | 34689.471507733 |
+| symfony:instance          | benchInvalidMethod | 300    | 0.010012 seconds | 29964.308337104 |
+| symfony:instance          | benchAll           | 364    | 0.012503 seconds | 29112.67030243  |
+| symfony:instance          | benchLast          | 300    | 0.010993 seconds | 27290.084150256 |
+| fast-route(mark):instance | benchLongest       | 300    | 0.037936 seconds | 7908.0614649782 |
+| flight-routing:instance   | benchLongest       | 300    | 0.043426 seconds | 6908.297921402  |
+| hack-routing:instance     | benchLongest       | 300    | 0.045520 seconds | 6590.5344534998 |
+| symfony:instance          | benchLongest       | 300    | 0.050781 seconds | 5907.7200445089 |
 +---------------------------+--------------------+--------+------------------+-----------------+
 ```
 
@@ -199,25 +199,25 @@ https://github.com/divineniiquaye/benchmark-php-routing/actions
 +------------------+------ Benchmark results for group raw. --------+-----------------+
 | Case             | Scenario           | Routes | Time             | Per Second      |
 +------------------+--------------------+--------+------------------+-----------------+
-| flight-routing   | benchInvalidRoute  | 300    | 0.176998 seconds | 1694.9353635522 |
-| flight-routing   | benchLast          | 300    | 0.184605 seconds | 1625.0903408284 |
-| flight-routing   | benchInvalidMethod | 300    | 0.196045 seconds | 1530.2615193026 |
-| flight-routing   | benchAll           | 364    | 0.274102 seconds | 1327.9729312923 |
-| fast-route(mark) | benchInvalidMethod | 300    | 0.235736 seconds | 1272.6093275442 |
-| fast-route(mark) | benchLast          | 300    | 0.242793 seconds | 1235.6200434429 |
-| fast-route(mark) | benchInvalidRoute  | 300    | 0.244260 seconds | 1228.2002928258 |
-| fast-route(mark) | benchAll           | 364    | 0.298489 seconds | 1219.4750414152 |
-| fast-route(mark) | benchLongest       | 300    | 0.275306 seconds | 1089.6966096455 |
-| flight-routing   | benchLongest       | 300    | 0.326597 seconds | 918.56331400514 |
-| symfony          | benchAll           | 364    | 0.404814 seconds | 899.17837721957 |
-| symfony          | benchLongest       | 300    | 0.365158 seconds | 821.56199072332 |
-| symfony          | benchInvalidMethod | 300    | 0.482185 seconds | 622.16767840288 |
-| symfony          | benchInvalidRoute  | 300    | 0.499696 seconds | 600.36500233553 |
-| symfony          | benchLast          | 300    | 0.503743 seconds | 595.54185316427 |
-| hack-routing     | benchAll           | 364    | 1.818926 seconds | 200.1180811073  |
-| hack-routing     | benchLast          | 300    | 1.515412 seconds | 197.96595364546 |
-| hack-routing     | benchInvalidMethod | 300    | 1.518514 seconds | 197.56157415425 |
-| hack-routing     | benchInvalidRoute  | 300    | 1.521535 seconds | 197.16928550197 |
-| hack-routing     | benchLongest       | 300    | 1.580906 seconds | 189.76461362129 |
+| flight-routing   | benchInvalidRoute  | 300    | 0.086190 seconds | 3480.6731801232 |
+| flight-routing   | benchLast          | 300    | 0.104715 seconds | 2864.916087403  |
+| flight-routing   | benchInvalidMethod | 300    | 0.106011 seconds | 2829.8973106453 |
+| flight-routing   | benchAll           | 364    | 0.159484 seconds | 2282.3619065844 |
+| flight-routing   | benchLongest       | 300    | 0.220737 seconds | 1359.0835545744 |
+| fast-route(mark) | benchAll           | 364    | 0.275296 seconds | 1322.2133119709 |
+| fast-route(mark) | benchLast          | 300    | 0.229985 seconds | 1304.432905154  |
+| fast-route(mark) | benchInvalidMethod | 300    | 0.234520 seconds | 1279.2088226683 |
+| fast-route(mark) | benchInvalidRoute  | 300    | 0.236769 seconds | 1267.057974123  |
+| fast-route(mark) | benchLongest       | 300    | 0.271809 seconds | 1103.7158019385 |
+| symfony          | benchAll           | 364    | 0.394430 seconds | 922.85032036558 |
+| symfony          | benchLongest       | 300    | 0.362111 seconds | 828.47503693696 |
+| symfony          | benchInvalidRoute  | 300    | 0.475322 seconds | 631.15108256486 |
+| symfony          | benchLast          | 300    | 0.493186 seconds | 608.28977671553 |
+| symfony          | benchInvalidMethod | 300    | 0.496024 seconds | 604.80957473654 |
+| hack-routing     | benchInvalidMethod | 300    | 1.369977 seconds | 218.98177894572 |
+| hack-routing     | benchLongest       | 300    | 1.393689 seconds | 215.25607063829 |
+| hack-routing     | benchAll           | 364    | 1.877864 seconds | 193.83724075659 |
+| hack-routing     | benchInvalidRoute  | 300    | 1.565661 seconds | 191.61236621837 |
+| hack-routing     | benchLast          | 300    | 1.569695 seconds | 191.11993144362 |
 +------------------+--------------------+--------+------------------+-----------------+
 ```
