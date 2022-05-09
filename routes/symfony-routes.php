@@ -1,6 +1,6 @@
-<?php
+<?php 
 
-$routes = new Symfony\Component\Routing\RouteCollection();
+$routes = new Symfony\Component\Routing\RouteCollection(); 
 
 $routes->add('addon', new Symfony\Component\Routing\Route('/addon', methods: ['GET']));
 $routes->add('addon_linkers', new Symfony\Component\Routing\Route('/addon/linkers', methods: ['GET']));
