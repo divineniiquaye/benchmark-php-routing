@@ -31,7 +31,7 @@ while ($r = fgets($fp)) {
     // $routes->addRoute('GET', '/addon', ['_route' => 'addon']);
     $hack[] = "\$routes->addRoute('GET', '{$r}', ['_route' => '{$name}']);";
 
-    $flight[] = "\$routes->addRoute('{$r}', ['GET'])->default('_route', '{$name}');";
+    $flight[] = "Route::to('{$r}', ['GET'])->default('_route', '{$name}'),";
 
     $m = $r;
     $result = "['_route' => '{$name}'";
@@ -60,11 +60,23 @@ fclose($fp);
 file_put_contents($symfony_routes, "<?php \n\n\$routes = new Symfony\Component\Routing\RouteCollection(); \n\n" . implode("\n", $symfony) . "\n\nreturn \$routes;");
 printf("%s done.\n", basename($symfony_routes));
 
-file_put_contents($flight_routes, "<?php\n\n" . implode("\n", $flight));
-printf("%s done.\n", basename($flight_routes));
-
 file_put_contents($fastroute_routes, "<?php\n\n" . implode("\n", $fast));
 printf("%s done.\n", basename($fastroute_routes));
+
+$flight = implode("\n    ", $flight);
+file_put_contents(
+    $flight_routes,
+    <<<PHP
+<?php
+
+use Flight\Routing\Route;
+
+return [
+    $flight
+];
+PHP
+);
+printf("%s done.\n", basename($flight_routes));
 
 $hack = implode("\n", $hack);
 file_put_contents(

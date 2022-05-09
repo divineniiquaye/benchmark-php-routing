@@ -15,7 +15,8 @@
     "azjezz/hack-routing": "dev-main",
     "divineniiquaye/flight-routing": "^2.x-dev",
     "symfony/config": "^5.4.x-dev",
-    "nyholm/psr7": "^1.4"
+    "nyholm/psr7": "^1.4",
+    "symfony/var-exporter": "^6.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.6.0"

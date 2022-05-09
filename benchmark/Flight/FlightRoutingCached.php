@@ -21,6 +21,6 @@ final class FlightRoutingCached extends Benchmark
 
     public function loadedRoutes(RouteCollection $routes): void
     {
-        include __DIR__ . '/../../routes/flight-routing-routes.php';
+        $routes->routes(include __DIR__ . '/../../routes/flight-routing-routes.php', false);
     }
 }
